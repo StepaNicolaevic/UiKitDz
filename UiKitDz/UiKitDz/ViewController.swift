@@ -45,6 +45,7 @@ final class ViewController: UIViewController {
         swapAlertController.addTextField { textField in
             textField.placeholder = "Введите слово"
         }
+        swapAlertController.preferredAction = okAction
         present(swapAlertController, animated: true)
     }
 }
