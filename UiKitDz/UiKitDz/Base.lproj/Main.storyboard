@@ -81,7 +81,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="fixed">
-                                    <backgroundConfiguration key="background" cornerRadius="12"/>
+                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="0.27272002551020408" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Войти">
                                             <attributes>
@@ -90,7 +92,6 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="LRR-fh-D20" kind="show" id="qaR-Ix-Ffp"/>
@@ -110,6 +111,7 @@
                     <navigationItem key="navigationItem" id="irs-tR-8ld"/>
                     <connections>
                         <outlet property="eyeButton" destination="xTn-gr-Y3n" id="4ov-ex-29X"/>
+                        <outlet property="loginButton" destination="wO0-9R-uId" id="evr-dz-9fa"/>
                         <outlet property="loginTextField" destination="kjC-s2-mJV" id="IbD-0B-s6u"/>
                         <outlet property="passwordTextField" destination="LkL-nb-0SB" id="egI-rh-Apo"/>
                     </connections>
