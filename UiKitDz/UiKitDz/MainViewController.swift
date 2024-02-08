@@ -5,7 +5,7 @@ import UIKit
 
 /// class viewcontroller
 final class MainViewController: UIViewController {
-    // MARK: - Private Properties
+    // MARK: - Public Properties
 
     private lazy var calculateButton: UIButton = {
         let button = UIButton()
@@ -37,9 +37,11 @@ final class MainViewController: UIViewController {
         return button
     }()
 
+    // MARK: - Private Properties
+
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = UIColor(named: "SkyblueColor")
+        label.backgroundColor = UIColor(named: "SkyBlueColor")
         label.font = UIFont(name: "Verdana", size: 30)
         label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
         label.textColor = .white
@@ -99,11 +101,15 @@ final class MainViewController: UIViewController {
     }
 
     @objc private func callCalculete() {
-        let alert = UIAlertController(title: "Введите ваши числа", message: nil, preferredStyle: .alert)
+        let calculateAlertController = UIAlertController(
+            title: "Введите ваши числа",
+            message: nil,
+            preferredStyle: .alert
+        )
         let cancellationAction = UIAlertAction(title: "Отмена", style: .default)
-        let sumAction = UIAlertAction(title: "Сложение", style: .default) { _ in
+        let sumAction = UIAlertAction(title: "Суммирование", style: .default) { _ in
             var sum = 0
-            if let textFields = alert.textFields {
+            if let textFields = calculateAlertController.textFields {
                 let numberOne = Int(textFields[0].text ?? "")
                 let numberTwo = Int(textFields[1].text ?? "")
                 sum = (numberOne ?? 0) + (numberTwo ?? 0)
@@ -112,24 +118,27 @@ final class MainViewController: UIViewController {
 
             let okAction = UIAlertAction(title: "OK", style: .default)
             let cancellationAction = UIAlertAction(title: "Отмена", style: .default)
+
             resultAlert.addAction(cancellationAction)
             resultAlert.addAction(okAction)
+            resultAlert.preferredAction = okAction
             self.present(resultAlert, animated: true)
         }
 
-        alert.addTextField { text in
+        calculateAlertController.addTextField { text in
             text.placeholder = "Число 1"
             text.keyboardType = .numberPad
         }
 
-        alert.addTextField { text in
+        calculateAlertController.addTextField { text in
             text.placeholder = "Число 1"
             text.keyboardType = .numberPad
         }
 
-        alert.addAction(sumAction)
-        alert.addAction(cancellationAction)
-        present(alert, animated: true)
+        calculateAlertController.addAction(sumAction)
+        calculateAlertController.addAction(cancellationAction)
+        calculateAlertController.preferredAction = sumAction
+        present(calculateAlertController, animated: true)
     }
 
     @objc private func guessTheNumber() {
@@ -148,15 +157,17 @@ final class MainViewController: UIViewController {
                 }
             }
             let resultAlertController = UIAlertController(title: titleAlert, message: message, preferredStyle: .alert)
-            resultAlertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            resultAlertController.addAction(okAction)
             self.present(resultAlertController, animated: true)
         }
         let cancellationAction = UIAlertAction(title: "Отмена", style: .default)
         alertController.addTextField { textField in
             textField.placeholder = "Введите число"
         }
-        alertController.addAction(okAction)
         alertController.addAction(cancellationAction)
+        alertController.addAction(okAction)
+        alertController.preferredAction = okAction
         present(alertController, animated: true)
     }
 }
