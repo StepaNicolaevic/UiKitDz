@@ -5,7 +5,7 @@ import UIKit
 
 /// class viewcontroller
 final class MainViewController: UIViewController {
-    // MARK: - Public Properties
+    // MARK: - Private Properties
 
     private lazy var calculateButton: UIButton = {
         let button = UIButton()
@@ -36,8 +36,6 @@ final class MainViewController: UIViewController {
 
         return button
     }()
-
-    // MARK: - Private Properties
 
     private let titleLabel: UILabel = {
         let label = UILabel()
