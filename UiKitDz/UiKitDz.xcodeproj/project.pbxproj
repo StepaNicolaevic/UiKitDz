@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDB2B7171420020A315 /* AppDelegate.swift */; };
 		1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDD2B7171420020A315 /* SceneDelegate.swift */; };
-		1B75ADE02B7171420020A315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* ViewController.swift */; };
+		1B75ADE02B7171420020A315 /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* PlayListViewController.swift */; };
 		1B75ADE32B7171420020A315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE12B7171420020A315 /* Main.storyboard */; };
 		1B75ADE52B7171430020A315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE42B7171430020A315 /* Assets.xcassets */; };
 		1B75ADE82B7171430020A315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */; };
+		1BA584212B795A520004FF0B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584202B795A520004FF0B /* PlayerViewController.swift */; };
+		1BA584232B79607D0004FF0B /* KorolLesnik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1BA584222B79607D0004FF0B /* KorolLesnik.mp3 */; };
+		1BA584252B7967C70004FF0B /* KuklaKolduna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1BA584242B7967C70004FF0B /* KuklaKolduna.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B75ADD82B7171420020A315 /* UiKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75ADDB2B7171420020A315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B75ADDD2B7171420020A315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B75ADDF2B7171420020A315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B75ADDF2B7171420020A315 /* PlayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
 		1B75ADE22B7171420020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B75ADE42B7171430020A315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B75ADE72B7171430020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B75ADE92B7171430020A315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA584202B795A520004FF0B /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		1BA584222B79607D0004FF0B /* KorolLesnik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = KorolLesnik.mp3; sourceTree = "<group>"; };
+		1BA584242B7967C70004FF0B /* KuklaKolduna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = KuklaKolduna.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				1B75ADDB2B7171420020A315 /* AppDelegate.swift */,
 				1B75ADDD2B7171420020A315 /* SceneDelegate.swift */,
-				1B75ADDF2B7171420020A315 /* ViewController.swift */,
+				1B75ADDF2B7171420020A315 /* PlayListViewController.swift */,
 				1B75ADE12B7171420020A315 /* Main.storyboard */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */,
 				1B75ADE92B7171430020A315 /* Info.plist */,
+				1BA584202B795A520004FF0B /* PlayerViewController.swift */,
+				1BA584222B79607D0004FF0B /* KorolLesnik.mp3 */,
+				1BA584242B7967C70004FF0B /* KuklaKolduna.mp3 */,
 			);
 			path = UiKitDz;
 			sourceTree = "<group>";
@@ -129,6 +138,8 @@
 			files = (
 				1B75ADE82B7171430020A315 /* LaunchScreen.storyboard in Resources */,
 				1B75ADE52B7171430020A315 /* Assets.xcassets in Resources */,
+				1BA584252B7967C70004FF0B /* KuklaKolduna.mp3 in Resources */,
+				1BA584232B79607D0004FF0B /* KorolLesnik.mp3 in Resources */,
 				1B75ADE32B7171420020A315 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B75ADE02B7171420020A315 /* ViewController.swift in Sources */,
+				1B75ADE02B7171420020A315 /* PlayListViewController.swift in Sources */,
+				1BA584212B795A520004FF0B /* PlayerViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
 			);
