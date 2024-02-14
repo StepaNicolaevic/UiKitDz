@@ -5,13 +5,13 @@ import UIKit
 
 /// стартовый экран где нужно ввести логин или пароль либо воспользоваться фейс айди
 final class LoginViewController: UIViewController {
-    // MARK: - Constants
+    
 
+    // MARK: - Visual Components
+    
     private let faceIdSwitch = UISwitch()
     private let lineOneView = UIView()
     private let lineTwoView = UIView()
-
-    // MARK: - Visual Components
 
     private let imageBirrthdayView: UIImageView = {
         let imageView = UIImageView()
@@ -134,15 +134,6 @@ final class LoginViewController: UIViewController {
         faceIdSwitch.frame = CGRect(x: 248, y: 544, width: 35, height: 54)
     }
 
-    @objc private func useFaceId(sender: UISwitch) {
-        if sender.isOn {
-            emailTextfield.text = "pakholkov@yandex.ru"
-            passwordTextfield.text = "12345678"
-            loginButton.alpha = 1
-            loginButton.isEnabled = true
-        }
-    }
-
     private func addLine() {
         view.addSubview(lineOneView)
         lineOneView.backgroundColor = .systemGray4
@@ -150,6 +141,14 @@ final class LoginViewController: UIViewController {
         view.addSubview(lineTwoView)
         lineTwoView.backgroundColor = .systemGray4
         lineTwoView.frame = CGRect(x: 20, y: 448, width: 335, height: 1)
+    }
+    @objc private func useFaceId(sender: UISwitch) {
+        if sender.isOn {
+            emailTextfield.text = "pakholkov@yandex.ru"
+            passwordTextfield.text = "12345678"
+            loginButton.alpha = 1
+            loginButton.isEnabled = true
+        }
     }
 
     @objc private func transitionLogin() {

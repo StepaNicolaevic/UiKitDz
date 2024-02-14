@@ -5,8 +5,8 @@ import UIKit
 
 /// Добавление нового контакта в мои список контактов
 final class ContactPeopleViewController: UIViewController {
-    // MARK: - Constants
 
+    // MARK: - Visual Components
     private let datePicker = UIDatePicker()
     private let genderPicker = CustomPicker()
     private let agePicker = AgePickerController()
@@ -15,7 +15,6 @@ final class ContactPeopleViewController: UIViewController {
     private let toolbar3 = UIToolbar()
     private let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
-    // MARK: - Visual Components
 
     private let fullnamelTitleLabel: UILabel = {
         let label = UILabel()
@@ -149,8 +148,7 @@ final class ContactPeopleViewController: UIViewController {
 
     weak var delegate: PeopleDelegate?
     private var trasitionDate = String()
-
-    // MARK: - Private Properties
+    // MARK: - Life Cycle
 
     private lazy var doneButton = UIBarButtonItem(
         title: "Done",
@@ -171,7 +169,6 @@ final class ContactPeopleViewController: UIViewController {
         action: #selector(agePickerValueChanged)
     )
 
-    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

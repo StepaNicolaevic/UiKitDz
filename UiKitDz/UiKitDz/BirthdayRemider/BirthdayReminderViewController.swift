@@ -10,11 +10,11 @@ protocol PeopleDelegate: AnyObject {
 /// Экран где все пользователь записаны у них есть свойства день рождения сколько лет имя и сколько осталось до дня
 /// рожления
 final class BirthdayReminderViewController: UIViewController {
-    // MARK: - Constants
-
-    private let firstCellView = CustomCellView()
+    
 
     // MARK: - Private Properties
+    private let firstCellView = CustomCellView()
+
 
     private var allCellForPeople: [CustomCellView] = [
         CustomCellView(),
