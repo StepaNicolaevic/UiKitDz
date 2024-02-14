@@ -6,9 +6,19 @@ import UIKit
 
 ///  плеер для моих треков
 final class PlayerViewController: UIViewController {
+    // MARK: - IBOutlets
+    
+    @IBOutlet private var durationMisic: UISlider!
+    @IBOutlet private var valueSlayder: UISlider!
+    @IBOutlet private var muteButton: UIButton!
+    @IBOutlet private var playStopLabel: UIButton!
+    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private var nameTrackLabel: UILabel!
+    @IBOutlet private var setImage: UIImageView!
     // MARK: - Public Properties
-
+    
     var currentIndex = 0
+    
 
     // MARK: - Private Properties
 
@@ -17,16 +27,6 @@ final class PlayerViewController: UIViewController {
     private var nameTrack = ["Лесник", "Кукла колдуна"]
     private var trackImage = ["song1", "song2"]
     private var timer = Timer()
-
-    // MARK: - IBOutlets
-
-    @IBOutlet private var durationMisic: UISlider!
-    @IBOutlet private var valueSlayder: UISlider!
-    @IBOutlet private var muteButton: UIButton!
-    @IBOutlet private var playStopLabel: UIButton!
-    @IBOutlet private var timeLabel: UILabel!
-    @IBOutlet private var nameTrackLabel: UILabel!
-    @IBOutlet private var setImage: UIImageView!
 
     // MARK: - Life Cycle
 
