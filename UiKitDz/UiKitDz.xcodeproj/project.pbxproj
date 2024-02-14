@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDB2B7171420020A315 /* AppDelegate.swift */; };
 		1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDD2B7171420020A315 /* SceneDelegate.swift */; };
-		1B75ADE02B7171420020A315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* ViewController.swift */; };
+		1B75ADE02B7171420020A315 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* LoginViewController.swift */; };
 		1B75ADE32B7171420020A315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE12B7171420020A315 /* Main.storyboard */; };
 		1B75ADE52B7171430020A315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE42B7171430020A315 /* Assets.xcassets */; };
 		1B75ADE82B7171430020A315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */; };
+		1BA5840D2B767A820004FF0B /* BirthdayReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5840C2B767A820004FF0B /* BirthdayReminderViewController.swift */; };
+		1BA5840F2B7681770004FF0B /* CustomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5840E2B7681770004FF0B /* CustomCellView.swift */; };
+		1BA584152B76DE550004FF0B /* ContactPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584142B76DE550004FF0B /* ContactPeopleViewController.swift */; };
+		1BA584172B76FDFF0004FF0B /* GenderPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584162B76FDFF0004FF0B /* GenderPickerViewController.swift */; };
+		1BA5841A2B77C3FC0004FF0B /* AgePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584192B77C3FC0004FF0B /* AgePickerController.swift */; };
+		1BA5841D2B77E21E0004FF0B /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5841C2B77E21E0004FF0B /* PeopleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B75ADD82B7171420020A315 /* UiKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75ADDB2B7171420020A315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B75ADDD2B7171420020A315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B75ADDF2B7171420020A315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B75ADDF2B7171420020A315 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B75ADE22B7171420020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B75ADE42B7171430020A315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B75ADE72B7171430020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B75ADE92B7171430020A315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA5840C2B767A820004FF0B /* BirthdayReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderViewController.swift; sourceTree = "<group>"; };
+		1BA5840E2B7681770004FF0B /* CustomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellView.swift; sourceTree = "<group>"; };
+		1BA584142B76DE550004FF0B /* ContactPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPeopleViewController.swift; sourceTree = "<group>"; };
+		1BA584162B76FDFF0004FF0B /* GenderPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPickerViewController.swift; sourceTree = "<group>"; };
+		1BA584192B77C3FC0004FF0B /* AgePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePickerController.swift; sourceTree = "<group>"; };
+		1BA5841C2B77E21E0004FF0B /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,37 @@
 		1B75ADDA2B7171420020A315 /* UiKitDz */ = {
 			isa = PBXGroup;
 			children = (
+				1BA5841B2B77E1BF0004FF0B /* BirthdayRemider */,
+				1BA584182B7799EB0004FF0B /* Pickers  */,
 				1B75ADDB2B7171420020A315 /* AppDelegate.swift */,
 				1B75ADDD2B7171420020A315 /* SceneDelegate.swift */,
-				1B75ADDF2B7171420020A315 /* ViewController.swift */,
+				1B75ADDF2B7171420020A315 /* LoginViewController.swift */,
 				1B75ADE12B7171420020A315 /* Main.storyboard */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */,
 				1B75ADE92B7171430020A315 /* Info.plist */,
+				1BA584142B76DE550004FF0B /* ContactPeopleViewController.swift */,
 			);
 			path = UiKitDz;
+			sourceTree = "<group>";
+		};
+		1BA584182B7799EB0004FF0B /* Pickers  */ = {
+			isa = PBXGroup;
+			children = (
+				1BA584162B76FDFF0004FF0B /* GenderPickerViewController.swift */,
+				1BA584192B77C3FC0004FF0B /* AgePickerController.swift */,
+			);
+			path = "Pickers ";
+			sourceTree = "<group>";
+		};
+		1BA5841B2B77E1BF0004FF0B /* BirthdayRemider */ = {
+			isa = PBXGroup;
+			children = (
+				1BA5840C2B767A820004FF0B /* BirthdayReminderViewController.swift */,
+				1BA5840E2B7681770004FF0B /* CustomCellView.swift */,
+				1BA5841C2B77E21E0004FF0B /* PeopleModel.swift */,
+			);
+			path = BirthdayRemider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +217,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B75ADE02B7171420020A315 /* ViewController.swift in Sources */,
+				1BA584152B76DE550004FF0B /* ContactPeopleViewController.swift in Sources */,
+				1BA5841D2B77E21E0004FF0B /* PeopleModel.swift in Sources */,
+				1B75ADE02B7171420020A315 /* LoginViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
+				1BA584172B76FDFF0004FF0B /* GenderPickerViewController.swift in Sources */,
+				1BA5840D2B767A820004FF0B /* BirthdayReminderViewController.swift in Sources */,
+				1BA5841A2B77C3FC0004FF0B /* AgePickerController.swift in Sources */,
+				1BA5840F2B7681770004FF0B /* CustomCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
