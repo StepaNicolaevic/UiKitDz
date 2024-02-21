@@ -20,8 +20,8 @@ final class FeedViewController: UIViewController {
 
     private let tableView: UITableView = .init()
     private let userStories = SourseTable.makeUsers()
-    private let userPosts = SorsePosts.makeImage()
-    private let recomendedUsers = SorseRecomend.makeFriends()
+    private let userPosts = SoursePosts.makeImage()
+    private let recomendedUsers = SourseRecomend.makeFriends()
 
     private let sections: [CellTypePost] = [.stories, .firstPage, .recomed, .pages]
 

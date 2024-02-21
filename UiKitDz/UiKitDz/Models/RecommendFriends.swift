@@ -12,7 +12,7 @@ struct RecomendFriends {
 }
 
 /// Добавление рекомендаций в массив
-struct SorseRecomend {
+struct SourseRecomend {
     /// Добавляет пользователя в массив рекомендаций
     static func makeFriends() -> [RecomendFriends] {
         [

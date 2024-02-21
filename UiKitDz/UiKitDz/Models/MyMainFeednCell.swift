@@ -16,7 +16,7 @@ struct MyMainFeednCell {
 }
 
 /// Добавление постов в массив
-struct SorsePosts {
+struct SoursePosts {
     /// Добавляет пост на главный жкран
     static func makeImage() -> [MyMainFeednCell] {
         [
