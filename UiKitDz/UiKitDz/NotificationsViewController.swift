@@ -105,20 +105,20 @@ extension NotificationsViewController: UITableViewDataSource {
             cell.updateCell(post: todayType[indexPath.row])
             return cell
         case .thisWeak:
-            if let subscribeUser = thisWeakType[indexPath.row] as? SubscribeUser {
+            if let userPost = thisWeakType[indexPath.row] as? SubscribeUser {
                 if let cell = tableView.dequeueReusableCell(
                     withIdentifier: Constants.buttonCellIdentifier,
                     for: indexPath
                 ) as? ButtonTableViewCell {
-                    cell.updateCell(subscribe: subscribeUser)
+                    cell.updateCell(subscribe: userPost)
                     return cell
                 }
-            } else if let subscribeUser = thisWeakType[indexPath.row] as? PostComment {
+            } else if let userPost = thisWeakType[indexPath.row] as? PostComment {
                 if let cell = tableView.dequeueReusableCell(
                     withIdentifier: Constants.postCellIdentifier,
                     for: indexPath
                 ) as? PostTableViewCell {
-                    cell.updateCell(post: subscribeUser)
+                    cell.updateCell(post: userPost)
                     return cell
                 }
             }
