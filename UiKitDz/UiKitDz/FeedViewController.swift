@@ -5,6 +5,20 @@ import UIKit
 
 /// Oсновной экран с лентой рекомедациями и сторисами
 final class FeedViewController: UIViewController {
+    // MARK: - Types
+
+    /// Перечисление используеться для структурирования первого экрана
+    enum CellTypePost {
+        /// Скрол вью с горизонтальными ячейками
+        case stories
+        /// Первая публикация
+        case firstPage
+        /// Список рекомендованых друзей
+        case recomed
+        /// Все остальные публикации
+        case pages
+    }
+
     // MARK: - Constants
 
     private enum Constants {
@@ -19,18 +33,6 @@ final class FeedViewController: UIViewController {
     }
 
     // MARK: - Private Properties
-
-    /// Перечисление используеться для структурирования первого экрана
-    enum CellTypePost {
-        /// Скрол вью с горизонтальными ячейками
-        case stories
-        /// Первая публикация
-        case firstPage
-        /// Список рекомендованых друзей
-        case recomed
-        /// Все остальные публикации
-        case pages
-    }
 
     private let tableView: UITableView = .init()
     private let userStories = Story.makeUsers()

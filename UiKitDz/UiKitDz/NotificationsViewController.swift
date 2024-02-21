@@ -5,6 +5,18 @@ import UIKit
 
 /// Экран уведомлений пользователя
 final class NotificationsViewController: UIViewController {
+    // MARK: - Types
+
+    /// Перечисление секций в уведомлениях
+    enum CellTypeNotifications {
+        /// Запросы на добавление
+        case request
+        /// Уведомления которые пришли сегодня
+        case today
+        /// Уведомления на этой неделе
+        case thisWeak
+    }
+
     // MARK: - Constants
 
     private enum Constants {
@@ -35,15 +47,6 @@ final class NotificationsViewController: UIViewController {
         Subscriber(postText: "markS появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam"),
         Subscriber(postText: "sv_neit появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam")
     ]
-    /// Перечисление секций в уведомлениях
-    enum CellTypeNotifications {
-        /// Запросы на добавление
-        case request
-        /// Уведомления которые пришли сегодня
-        case today
-        /// Уведомления на этой неделе
-        case thisWeak
-    }
 
     private let tableView: UITableView = .init()
 
