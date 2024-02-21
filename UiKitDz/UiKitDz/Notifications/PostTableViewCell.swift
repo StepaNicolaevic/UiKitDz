@@ -47,17 +47,19 @@ final class PostTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureCell()
+        addConstraint()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureCell()
+        addConstraint()
     }
 
     // MARK: - Public Methods
 
-    func updateCell(post: PostComment) {
+    func updateCell(post: PostNotification) {
         avatarImageView.image = UIImage(named: post.avatar)
         postLabel.text = post.postText
         postImageView.image = UIImage(named: post.postImage)
@@ -74,7 +76,9 @@ final class PostTableViewCell: UITableViewCell {
         avatarImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         avatarImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6).isActive = true
+    }
 
+    private func addConstraint() {
         postLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 7).isActive = true
         postLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
         postLabel.widthAnchor.constraint(equalToConstant: 240).isActive = true

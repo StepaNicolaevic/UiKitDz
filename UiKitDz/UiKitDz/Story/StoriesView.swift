@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// Ячейка сторис
+/// Вью сторис
 final class StoriesView: UIView {
     // MARK: - Constants
 
@@ -34,7 +34,7 @@ final class StoriesView: UIView {
 
     // MARK: - Initializers
 
-    convenience init(history: ScrollStrories) {
+    convenience init(history: Story) {
         self.init()
         updateView()
         avatarImageView.image = UIImage(named: history.avatar)

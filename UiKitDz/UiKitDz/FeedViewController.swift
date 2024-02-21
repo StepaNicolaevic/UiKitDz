@@ -18,24 +18,37 @@ final class FeedViewController: UIViewController {
         static let cancelButtonImage = "xmark"
     }
 
-    private let tableView: UITableView = .init()
-    private let userStories = SourseTable.makeUsers()
-    private let userPosts = SoursePosts.makeImage()
-    private let recomendedUsers = SourseRecomend.makeFriends()
+    // MARK: - Private Properties
 
+    /// Перечисление используеться для структурирования первого экрана
+    enum CellTypePost {
+        /// Скрол вью с горизонтальными ячейками
+        case stories
+        /// Первая публикация
+        case firstPage
+        /// Список рекомендованых друзей
+        case recomed
+        /// Все остальные публикации
+        case pages
+    }
+
+    private let tableView: UITableView = .init()
+    private let userStories = Story.makeUsers()
+    private let userPosts = Post.makeImage()
+    private let recomendedUsers = RecomendFriends.makeFriends()
     private let sections: [CellTypePost] = [.stories, .firstPage, .recomed, .pages]
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
-        configureStoryCell()
+        configureNavBar()
+        configureTableView()
     }
 
     // MARK: - Private Methods
 
-    private func configureView() {
+    private func configureNavBar() {
         tableView.rowHeight = UITableView.automaticDimension
         view.backgroundColor = .white
         let leftLabel = UILabel()
@@ -49,7 +62,7 @@ final class FeedViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightItem
     }
 
-    private func configureStoryCell() {
+    private func configureTableView() {
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.register(StoriesTableViewCell.self, forCellReuseIdentifier: Constants.storiesCellIdentifier)
@@ -64,7 +77,7 @@ final class FeedViewController: UIViewController {
     }
 }
 
-// MARK: - Extension TableViewDataSource
+// MARK: - FeedViewController + TableViewDataSource
 
 extension FeedViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,7 +111,7 @@ extension FeedViewController: UITableViewDataSource {
                 for: indexPath
             ) as? MainTableViewCell
             else { return UITableViewCell() }
-            cell.setupCell(setPost: userPosts[0])
+            cell.configureCell(post: userPosts[0])
             return cell
         case .recomed:
             guard let cell = tableView.dequeueReusableCell(
@@ -116,7 +129,7 @@ extension FeedViewController: UITableViewDataSource {
             ) as? MainTableViewCell
             else { return UITableViewCell() }
 
-            cell.setupCell(setPost: userPosts[indexPath.row + 1])
+            cell.configureCell(post: userPosts[indexPath.row + 1])
             return cell
         }
     }

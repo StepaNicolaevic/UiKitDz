@@ -1,10 +1,8 @@
-// SubscribeUser.swift
+// Subscriber.swift
 // Copyright © RoadMap. All rights reserved.
 
-import Foundation
-
 /// Уведомления о подписчиках
-struct SubscribeUser {
+struct Subscriber {
     /// Текст уведомления
     let postText: String
     /// Аватарка человека

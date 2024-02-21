@@ -31,7 +31,7 @@ final class StoriesTableViewCell: UITableViewCell {
 
     // MARK: - Public Methods
 
-    func updateCell(items: [ScrollStrories]) {
+    func updateCell(items: [Story]) {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         var startWidth = 0
         var startScroll: CGFloat = 0
@@ -55,6 +55,8 @@ final class StoriesTableViewCell: UITableViewCell {
 
     private func actionConstraite() {
         contentView.addSubview(scrollView)
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
         contentView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true

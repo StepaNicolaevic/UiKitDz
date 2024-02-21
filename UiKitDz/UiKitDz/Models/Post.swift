@@ -1,10 +1,8 @@
-// MyMainFeednCell.swift
+// Post.swift
 // Copyright © RoadMap. All rights reserved.
 
-import Foundation
-
 /// Данные поста в инстаграмме
-struct MyMainFeednCell {
+struct Post {
     /// Имя акаунта человека сделавшего пост
     let nameAccount: String
     /// Его аватар
@@ -13,12 +11,8 @@ struct MyMainFeednCell {
     let mainImage: [String]
     /// Подпись его поста
     let commentPage: String
-}
-
-/// Добавление постов в массив
-struct SoursePosts {
     /// Добавляет пост на главный жкран
-    static func makeImage() -> [MyMainFeednCell] {
+    static func makeImage() -> [Post] {
         [
             .init(
                 nameAccount: "StepanNIC",

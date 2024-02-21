@@ -1,18 +1,12 @@
 // RecommendFriends.swift
 // Copyright © RoadMap. All rights reserved.
 
-import Foundation
-
 /// Рекомендации для пользователя
 struct RecomendFriends {
     /// Имя акаунта
     let name: String
     /// Его аватар
     let avatar: String
-}
-
-/// Добавление рекомендаций в массив
-struct SourseRecomend {
     /// Добавляет пользователя в массив рекомендаций
     static func makeFriends() -> [RecomendFriends] {
         [

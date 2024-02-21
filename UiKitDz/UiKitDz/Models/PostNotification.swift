@@ -1,22 +1,16 @@
-// PostComment.swift
+// PostNotification.swift
 // Copyright © RoadMap. All rights reserved.
 
-import Foundation
-
 /// Уведмление о постах
-struct PostComment {
+struct PostNotification {
     /// Текст уведомления
     let postText: String
     /// Аватарка человека
     let avatar: String
-    /// Изображение о котоком постопило уведомление
+    /// Изображение о котоpом постопило уведомление
     let postImage: String
-}
-
-/// Массив уведолений для 2 секции
-struct SourseYourComment {
     /// функция добавления уведомлений
-    static func makePost() -> [PostComment] {
+    static func makePost() -> [PostNotification] {
         [
             .init(
                 postText: "lavanda123 понравился ваш комментарий: Очень красиво! 12ч",

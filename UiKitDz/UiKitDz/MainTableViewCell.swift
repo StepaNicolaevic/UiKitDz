@@ -121,48 +121,63 @@ final class MainTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configureCell()
-        addConstraint()
-        addSecondConstraint()
+        setupContentView()
+        setAvatarImaageViewConstraint()
+        setNameUserLabelConstraint()
+        setMainImageViewConstraint()
+        setButtonConstraint()
+        addLabelConstraint()
+        addCommentsConstraint()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setupContentView()
+        setAvatarImaageViewConstraint()
+        setNameUserLabelConstraint()
+        setMainImageViewConstraint()
+        setButtonConstraint()
+        addLabelConstraint()
+        addCommentsConstraint()
     }
 
     // MARK: - Public Methods
 
-    func setupCell(setPost: MyMainFeednCell) {
+    func configureCell(post: Post) {
         var xCoodinate = 0
-        if setPost.mainImage.count <= 1 {
-            mainImageView.image = UIImage(named: setPost.mainImage[0])
+        if post.mainImage.count <= 1 {
+            mainImageView.image = UIImage(named: post.mainImage[0])
         } else {
-            for image in setPost.mainImage {
-                contentView.addSubview(pageController)
-                contentView.addSubview(scrollView)
-                pageController.numberOfPages = setPost.mainImage.count
+            for image in post.mainImage {
+                pageController.numberOfPages = post.mainImage.count
                 let imageView = UIImageView()
                 imageView.image = UIImage(named: image)
                 imageView.frame = CGRect(x: xCoodinate, y: 0, width: Int(UIScreen.main.bounds.width), height: 240)
                 scrollView.addSubview(imageView)
                 xCoodinate += Int(UIScreen.main.bounds.width)
-                pageController.centerYAnchor.constraint(equalTo: likeButton.centerYAnchor).isActive = true
-                pageController.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-                scrollView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10).isActive = true
-                scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-                scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-                scrollView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+                addConstraintScroll()
             }
         }
-        commentLabel.text = setPost.commentPage
-        nameUserLabel.text = setPost.nameAccount
-        avatarImageView.image = UIImage(named: setPost.avatarAccount)
+        commentLabel.text = post.commentPage
+        nameUserLabel.text = post.nameAccount
+        avatarImageView.image = UIImage(named: post.avatarAccount)
     }
 
     // MARK: - Private Methods
 
-    private func configureCell() {
+    private func addConstraintScroll() {
+        contentView.addSubview(pageController)
+        contentView.addSubview(scrollView)
+        pageController.centerYAnchor.constraint(equalTo: likeButton.centerYAnchor).isActive = true
+        pageController.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        scrollView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+    }
+
+    private func setupContentView() {
         [
             timeAgoLabel,
             commentTextField,
@@ -186,22 +201,28 @@ final class MainTableViewCell: UITableViewCell {
         pageController.backgroundStyle = .automatic
     }
 
-    private func addConstraint() {
+    private func setAvatarImaageViewConstraint() {
         avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         avatarImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12).isActive = true
         avatarImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+    }
 
+    private func setNameUserLabelConstraint() {
         nameUserLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
         nameUserLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 6).isActive = true
         nameUserLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         nameUserLabel.widthAnchor.constraint(equalToConstant: 107).isActive = true
+    }
 
+    private func setMainImageViewConstraint() {
         mainImageView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10).isActive = true
         mainImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         mainImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
         mainImageView.heightAnchor.constraint(equalToConstant: 240).isActive = true
+    }
 
+    private func setButtonConstraint() {
         likeButton.topAnchor.constraint(equalTo: mainImageView.bottomAnchor, constant: 10).isActive = true
         likeButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13).isActive = true
         likeButton.heightAnchor.constraint(equalToConstant: 18).isActive = true
@@ -216,14 +237,14 @@ final class MainTableViewCell: UITableViewCell {
         aiplaneButton.leadingAnchor.constraint(equalTo: messedgeButton.trailingAnchor, constant: 11).isActive = true
         aiplaneButton.heightAnchor.constraint(equalToConstant: 18).isActive = true
         aiplaneButton.widthAnchor.constraint(equalToConstant: 18).isActive = true
-    }
 
-    private func addSecondConstraint() {
         saveButton.centerYAnchor.constraint(equalTo: likeButton.centerYAnchor).isActive = true
         saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -14).isActive = true
         saveButton.heightAnchor.constraint(equalToConstant: 18).isActive = true
         saveButton.widthAnchor.constraint(equalToConstant: 18).isActive = true
+    }
 
+    private func addLabelConstraint() {
         countLikeLabel.topAnchor.constraint(equalTo: likeButton.bottomAnchor, constant: 6).isActive = true
         countLikeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12).isActive = true
         countLikeLabel.widthAnchor.constraint(equalToConstant: 107).isActive = true
@@ -233,7 +254,9 @@ final class MainTableViewCell: UITableViewCell {
         commentLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12).isActive = true
         commentLabel.widthAnchor.constraint(equalToConstant: 360).isActive = true
         commentLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
 
+    private func addCommentsConstraint() {
         acountImageView.topAnchor.constraint(equalTo: commentLabel.bottomAnchor, constant: 4).isActive = true
         acountImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12).isActive = true
         acountImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
@@ -257,7 +280,7 @@ final class MainTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: - Extension UIScrollViewDelegate
+// MARK: - MainTableViewCell + UIScrollViewDelegate
 
 extension MainTableViewCell: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// Ячейка сторис в которой никнейм и картинка
+/// Вью сторис в которой никнейм и картинка
 final class RecomendView: UIView {
     // MARK: - Constants
 
@@ -62,6 +62,9 @@ final class RecomendView: UIView {
         avatarImageView.image = UIImage(named: recomend.avatar)
         nameLabel.text = recomend.name
         configureView()
+        setConstraintAvatarImageView()
+        setConstraintNameLabel()
+        setConstraintButtons()
     }
 
     // MARK: - Private Methods
@@ -73,15 +76,22 @@ final class RecomendView: UIView {
         addSubview(cancelButton)
         addSubview(subscribeButton)
         backgroundColor = .white
+    }
+
+    private func setConstraintAvatarImageView() {
         avatarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35).isActive = true
         avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: 15).isActive = true
         avatarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35).isActive = true
         avatarImageView.heightAnchor.constraint(equalToConstant: 115).isActive = true
+    }
 
+    private func setConstraintNameLabel() {
         nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 42).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -42).isActive = true
         nameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 5).isActive = true
+    }
 
+    private func setConstraintButtons() {
         subscribeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         subscribeButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 14).isActive = true
         subscribeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true

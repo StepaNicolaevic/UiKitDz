@@ -3,7 +3,7 @@
 
 import UIKit
 
-/// ячейка табцы с рекомендациями
+/// Ячейка таблицы с рекомендациями
 final class RecomendTableViewCell: UITableViewCell {
     // MARK: - Constants
 
@@ -44,12 +44,14 @@ final class RecomendTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupCell()
         actionConstraite()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupCell()
         actionConstraite()
     }
 
@@ -78,11 +80,16 @@ final class RecomendTableViewCell: UITableViewCell {
 
     // MARK: - Private Methods
 
-    private func actionConstraite() {
+    private func setupCell() {
         contentView.backgroundColor = .blueBackground
         contentView.addSubview(scrollView)
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
         contentView.addSubview(recomendYouLabel)
         contentView.addSubview(allUsersButton)
+    }
+
+    private func actionConstraite() {
         contentView.heightAnchor.constraint(equalToConstant: 260).isActive = true
         recomendYouLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
         recomendYouLabel.topAnchor.constraint(equalTo: topAnchor, constant: 9).isActive = true

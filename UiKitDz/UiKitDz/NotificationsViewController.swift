@@ -16,23 +16,34 @@ final class NotificationsViewController: UIViewController {
         static let titleThisWeakText = "На этой неделе"
     }
 
-    private let todayType = SourseYourComment.makePost()
+    // MARK: - Private Properties
+
+    private let todayType = PostNotification.makePost()
     private let thisWeakType: [Any] = [
-        PostComment(
+        PostNotification(
             postText: "lavanda123 понравился ваш комментарий: Это где? 3д.",
             avatar: "iam",
             postImage: "ocean"
         ),
-        SubscribeUser(postText: "12miho появился(-ась) в RMLink. Вы можете быть знакомы 3д.", avatar: "iam"),
-        PostComment(
+        Subscriber(postText: "12miho появился(-ась) в RMLink. Вы можете быть знакомы 3д.", avatar: "iam"),
+        PostNotification(
             postText: "lavanda123 понравился ваш комментарий: Ты вернулась? 7д.",
             avatar: "iam",
             postImage: "ocean"
         ),
-        SubscribeUser(postText: "lavanda123 подписался(-ась) на ваши новости 5д.", avatar: "iam"),
-        SubscribeUser(postText: "markS появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam"),
-        SubscribeUser(postText: "sv_neit появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam")
+        Subscriber(postText: "lavanda123 подписался(-ась) на ваши новости 5д.", avatar: "iam"),
+        Subscriber(postText: "markS появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam"),
+        Subscriber(postText: "sv_neit появился(-ась) в RMLink. Вы можете быть знакомы 8д.", avatar: "iam")
     ]
+    /// Перечисление секций в уведомлениях
+    enum CellTypeNotifications {
+        /// Запросы на добавление
+        case request
+        /// Уведомления которые пришли сегодня
+        case today
+        /// Уведомления на этой неделе
+        case thisWeak
+    }
 
     private let tableView: UITableView = .init()
 
@@ -43,7 +54,7 @@ final class NotificationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        configureStoryCell()
+        configureTable()
     }
 
     // MARK: - Private Methods
@@ -55,11 +66,12 @@ final class NotificationsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    private func configureStoryCell() {
+    private func configureTable() {
         view.addSubview(tableView)
         tableView.allowsSelection = true
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(ButtonTableViewCell.self, forCellReuseIdentifier: Constants.buttonCellIdentifier)
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: Constants.postCellIdentifier)
@@ -72,7 +84,7 @@ final class NotificationsViewController: UIViewController {
     }
 }
 
-// MARK: - Extension TableViewDataSource
+// MARK: - Extension NotificationsViewController + TableViewDataSource
 
 extension NotificationsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -105,15 +117,15 @@ extension NotificationsViewController: UITableViewDataSource {
             cell.updateCell(post: todayType[indexPath.row])
             return cell
         case .thisWeak:
-            if let userPost = thisWeakType[indexPath.row] as? SubscribeUser {
+            if let userPost = thisWeakType[indexPath.row] as? Subscriber {
                 if let cell = tableView.dequeueReusableCell(
                     withIdentifier: Constants.buttonCellIdentifier,
                     for: indexPath
                 ) as? ButtonTableViewCell {
-                    cell.updateCell(subscribe: userPost)
+                    cell.configure(subscriber: userPost)
                     return cell
                 }
-            } else if let userPost = thisWeakType[indexPath.row] as? PostComment {
+            } else if let userPost = thisWeakType[indexPath.row] as? PostNotification {
                 if let cell = tableView.dequeueReusableCell(
                     withIdentifier: Constants.postCellIdentifier,
                     for: indexPath
@@ -122,7 +134,8 @@ extension NotificationsViewController: UITableViewDataSource {
                     return cell
                 }
             }
-        }; return UITableViewCell()
+        }
+        return UITableViewCell()
     }
 }
 
