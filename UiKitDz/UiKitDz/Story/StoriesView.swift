@@ -7,7 +7,7 @@ import UIKit
 final class StoriesView: UIView {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let fontVerdana = "Verdana"
         static let sizeText = 8
         static let avatarImageViewCornerRadius = 30
@@ -23,7 +23,7 @@ final class StoriesView: UIView {
         return imageView
     }()
 
-    private let nameLabel: UILabel = {
+    private let nameUserLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Constants.fontVerdana, size: CGFloat(Constants.sizeText))
         label.textAlignment = .center
@@ -36,32 +36,36 @@ final class StoriesView: UIView {
 
     convenience init(history: ScrollStrories) {
         self.init()
-        addSubview(avatarImageView)
-        addSubview(nameLabel)
-        translatesAutoresizingMaskIntoConstraints = false
+        updateView()
         avatarImageView.image = UIImage(named: history.avatar)
-        nameLabel.text = history.name
-        configureView()
+        nameUserLabel.text = history.name
     }
 
     // MARK: - Public Methods
 
     func editFirstLabel() {
-        nameLabel.textColor = .gray
+        nameUserLabel.textColor = .gray
         avatarImageView.layer.cornerRadius = 0
     }
 
     // MARK: - Private Methods
 
-    private func configureView() {
+    private func updateView() {
+        addSubview(avatarImageView)
+        addSubview(nameUserLabel)
+        translatesAutoresizingMaskIntoConstraints = false
+        constraintForView()
+    }
+
+    private func constraintForView() {
         avatarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11).isActive = true
         avatarImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         avatarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11).isActive = true
         avatarImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15).isActive = true
 
-        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
-        nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 5).isActive = true
+        nameUserLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        nameUserLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        nameUserLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
+        nameUserLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 5).isActive = true
     }
 }

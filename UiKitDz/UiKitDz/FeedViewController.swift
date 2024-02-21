@@ -1,13 +1,13 @@
-// RibbonViewController.swift
+// FeedViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
 
 /// Oсновной экран с лентой рекомедациями и сторисами
-final class RibbonViewController: UIViewController {
+final class FeedViewController: UIViewController {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let leftLabelText = "RMLink"
         static let fontDancingScript = "DancingScript-Medium"
         static let sizeTextLeftLabel = 22
@@ -19,9 +19,9 @@ final class RibbonViewController: UIViewController {
     }
 
     private let tableView: UITableView = .init()
-    private let userStory = SourseTable.makeUsers()
-    private let setManePost = SorsePosts.makeImage()
-    private let recomendUser = SorseRecomend.makeFriends()
+    private let userStories = SourseTable.makeUsers()
+    private let userPosts = SorsePosts.makeImage()
+    private let recomendedUsers = SorseRecomend.makeFriends()
 
     private let sections: [CellTypePost] = [.stories, .firstPage, .recomed, .pages]
 
@@ -66,7 +66,7 @@ final class RibbonViewController: UIViewController {
 
 // MARK: - Extension TableViewDataSource
 
-extension RibbonViewController: UITableViewDataSource {
+extension FeedViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
     }
@@ -77,7 +77,7 @@ extension RibbonViewController: UITableViewDataSource {
         case .stories, .firstPage, .recomed:
             return 1
         case .pages:
-            return setManePost.count - 1
+            return userPosts.count - 1
         }
     }
 
@@ -90,7 +90,7 @@ extension RibbonViewController: UITableViewDataSource {
                 for: indexPath
             ) as? StoriesTableViewCell
             else { return UITableViewCell() }
-            cell.setupCell(items: userStory)
+            cell.updateCell(items: userStories)
             return cell
         case .firstPage:
             guard let cell = tableView.dequeueReusableCell(
@@ -98,7 +98,7 @@ extension RibbonViewController: UITableViewDataSource {
                 for: indexPath
             ) as? MainTableViewCell
             else { return UITableViewCell() }
-            cell.setup(setPost: setManePost[0])
+            cell.setupCell(setPost: userPosts[0])
             return cell
         case .recomed:
             guard let cell = tableView.dequeueReusableCell(
@@ -107,7 +107,7 @@ extension RibbonViewController: UITableViewDataSource {
             ) as? RecomendTableViewCell
             else { return UITableViewCell() }
 
-            cell.setupCell(user: recomendUser)
+            cell.setupCell(user: recomendedUsers)
             return cell
         case .pages:
             guard let cell = tableView.dequeueReusableCell(
@@ -116,7 +116,7 @@ extension RibbonViewController: UITableViewDataSource {
             ) as? MainTableViewCell
             else { return UITableViewCell() }
 
-            cell.setup(setPost: setManePost[indexPath.row + 1])
+            cell.setupCell(setPost: userPosts[indexPath.row + 1])
             return cell
         }
     }

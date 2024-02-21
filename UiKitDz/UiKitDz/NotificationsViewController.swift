@@ -3,11 +3,11 @@
 
 import UIKit
 
-/// Экран уведомлений
+/// Экран уведомлений пользователя
 final class NotificationsViewController: UIViewController {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let buttonCellIdentifier = "ButtonTableViewCell"
         static let postCellIdentifier = "PostTableViewCell"
         static let navigationItemTitleText = "Уведомления"

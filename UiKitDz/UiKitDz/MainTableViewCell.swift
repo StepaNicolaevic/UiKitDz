@@ -7,7 +7,7 @@ import UIKit
 final class MainTableViewCell: UITableViewCell {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let fontVerdanaBold = "Verdana-Bold"
         static let fontVerdana = "Verdana"
         static let countLikeLabelText = "Нравиться: 201"
@@ -26,7 +26,7 @@ final class MainTableViewCell: UITableViewCell {
         return imageView
     }()
 
-    private let nameLabel: UILabel = {
+    private let nameUserLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Constants.fontVerdana, size: 12)
         label.textAlignment = .left
@@ -133,7 +133,7 @@ final class MainTableViewCell: UITableViewCell {
 
     // MARK: - Public Methods
 
-    func setup(setPost: MyMainRibbonCell) {
+    func setupCell(setPost: MyMainFeednCell) {
         var xCoodinate = 0
         if setPost.mainImage.count <= 1 {
             mainImageView.image = UIImage(named: setPost.mainImage[0])
@@ -156,7 +156,7 @@ final class MainTableViewCell: UITableViewCell {
             }
         }
         commentLabel.text = setPost.commentPage
-        nameLabel.text = setPost.nameAccount
+        nameUserLabel.text = setPost.nameAccount
         avatarImageView.image = UIImage(named: setPost.avatarAccount)
     }
 
@@ -174,7 +174,7 @@ final class MainTableViewCell: UITableViewCell {
             messedgeButton,
             mainImageView,
             likeButton,
-            nameLabel,
+            nameUserLabel,
             commentLabel
         ].forEach { contentView.addSubview($0) }
         selectionStyle = .none
@@ -192,10 +192,10 @@ final class MainTableViewCell: UITableViewCell {
         avatarImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
         avatarImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
 
-        nameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 6).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        nameLabel.widthAnchor.constraint(equalToConstant: 107).isActive = true
+        nameUserLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
+        nameUserLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 6).isActive = true
+        nameUserLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        nameUserLabel.widthAnchor.constraint(equalToConstant: 107).isActive = true
 
         mainImageView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 10).isActive = true
         mainImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true

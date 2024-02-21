@@ -7,7 +7,7 @@ import UIKit
 final class StoriesTableViewCell: UITableViewCell {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let scrollStep = 85
         static let widthStep = 90
     }
@@ -25,12 +25,13 @@ final class StoriesTableViewCell: UITableViewCell {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        actionConstraite()
     }
 
     // MARK: - Public Methods
 
-    func setupCell(items: [ScrollStrories]) {
+    func updateCell(items: [ScrollStrories]) {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         var startWidth = 0
         var startScroll: CGFloat = 0

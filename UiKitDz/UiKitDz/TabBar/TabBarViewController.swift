@@ -4,8 +4,8 @@
 import UIKit
 
 /// Таб бар для проекта
-class TabBarViewController: UITabBarController {
-    enum Constants {
+final class TabBarViewController: UITabBarController {
+    private enum Constants {
         static let titleRibbon = "Лента"
         static let titleNotification = "Уведомления"
         static let titleProfile = "Профиль"
@@ -13,9 +13,9 @@ class TabBarViewController: UITabBarController {
 
     // MARK: - Visual Components
 
-    let ribbonViewController = RibbonViewController()
-    let notificationsViewController = NotificationsViewController()
-    let profileViewController = ProfileViewController()
+    private let feedViewController = FeedViewController()
+    private let notificationsViewController = NotificationsViewController()
+    private let profileViewController = ProfileViewController()
 
     // MARK: - Life Cycle
 
@@ -27,7 +27,7 @@ class TabBarViewController: UITabBarController {
     // MARK: - Private Methods
 
     private func createTabBar() {
-        let ribbonNavViewController = UINavigationController(rootViewController: ribbonViewController)
+        let ribbonNavViewController = UINavigationController(rootViewController: feedViewController)
         ribbonNavViewController.tabBarItem = UITabBarItem(title: Constants.titleRibbon, image: .home, tag: 0)
         let notificationsNavViewController = UINavigationController(rootViewController: notificationsViewController)
         notificationsNavViewController.tabBarItem = UITabBarItem(

@@ -3,11 +3,11 @@
 
 import UIKit
 
-/// Ячейка с кнопкой
+/// Ячейка уведомления с кнопкой
 final class ButtonTableViewCell: UITableViewCell {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let subscribeButtonText = "Подписаться"
         static let fontVerdanaBold = "Verdana-Bold"
         static let fontVerdana = "Verdana"
@@ -56,7 +56,8 @@ final class ButtonTableViewCell: UITableViewCell {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        configureCell()
     }
 
     // MARK: - Public Methods

@@ -13,7 +13,7 @@
 		1B75ADE52B7171430020A315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE42B7171430020A315 /* Assets.xcassets */; };
 		1B75ADE82B7171430020A315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */; };
 		1BA584562B839DA40004FF0B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584552B839DA40004FF0B /* TabBarViewController.swift */; };
-		1BA584582B839EA40004FF0B /* RibbonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584572B839EA40004FF0B /* RibbonViewController.swift */; };
+		1BA584582B839EA40004FF0B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584572B839EA40004FF0B /* FeedViewController.swift */; };
 		1BA5845A2B839ECC0004FF0B /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584592B839ECC0004FF0B /* NotificationsViewController.swift */; };
 		1BA5845C2B839EF10004FF0B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5845B2B839EF10004FF0B /* ProfileViewController.swift */; };
 		1BA584662B83A51C0004FF0B /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA5845F2B83A51B0004FF0B /* DancingScript-Bold.ttf */; };
@@ -25,12 +25,17 @@
 		1BA5846C2B83A51C0004FF0B /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA584652B83A51B0004FF0B /* DancingScript-VariableFont_wght.ttf */; };
 		1BA5846E2B83B1450004FF0B /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5846D2B83B1450004FF0B /* StoriesTableViewCell.swift */; };
 		1BA584702B83BC0D0004FF0B /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5846F2B83BC0D0004FF0B /* StoriesView.swift */; };
-		1BA584722B83BDBE0004FF0B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584712B83BDBE0004FF0B /* Models.swift */; };
+		1BA584722B83BDBE0004FF0B /* CellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584712B83BDBE0004FF0B /* CellTypes.swift */; };
 		1BA584742B83E7BF0004FF0B /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584732B83E7BF0004FF0B /* MainTableViewCell.swift */; };
 		1BA584792B8417150004FF0B /* RecomendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584782B8417150004FF0B /* RecomendTableViewCell.swift */; };
 		1BA5847B2B84172E0004FF0B /* RecomendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5847A2B84172E0004FF0B /* RecomendView.swift */; };
 		1BA5847E2B850C740004FF0B /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5847D2B850C740004FF0B /* ButtonTableViewCell.swift */; };
 		1BA584802B850C8B0004FF0B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5847F2B850C8B0004FF0B /* PostTableViewCell.swift */; };
+		1BA584832B861AF70004FF0B /* ScrollStrories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584822B861AF70004FF0B /* ScrollStrories.swift */; };
+		1BA584852B861B8B0004FF0B /* MyMainFeednCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584842B861B8B0004FF0B /* MyMainFeednCell.swift */; };
+		1BA584872B861BBD0004FF0B /* RecommendFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584862B861BBD0004FF0B /* RecommendFriends.swift */; };
+		1BA584892B861BF40004FF0B /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584882B861BF40004FF0B /* PostComment.swift */; };
+		1BA5848B2B861C510004FF0B /* SubscribeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5848A2B861C510004FF0B /* SubscribeUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +47,7 @@
 		1B75ADE72B7171430020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B75ADE92B7171430020A315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA584552B839DA40004FF0B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		1BA584572B839EA40004FF0B /* RibbonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RibbonViewController.swift; sourceTree = "<group>"; };
+		1BA584572B839EA40004FF0B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1BA584592B839ECC0004FF0B /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		1BA5845B2B839EF10004FF0B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1BA5845F2B83A51B0004FF0B /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Bold.ttf"; sourceTree = "<group>"; };
@@ -54,12 +59,17 @@
 		1BA584652B83A51B0004FF0B /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		1BA5846D2B83B1450004FF0B /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
 		1BA5846F2B83BC0D0004FF0B /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
-		1BA584712B83BDBE0004FF0B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		1BA584712B83BDBE0004FF0B /* CellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTypes.swift; sourceTree = "<group>"; };
 		1BA584732B83E7BF0004FF0B /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		1BA584782B8417150004FF0B /* RecomendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendTableViewCell.swift; sourceTree = "<group>"; };
 		1BA5847A2B84172E0004FF0B /* RecomendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendView.swift; sourceTree = "<group>"; };
 		1BA5847D2B850C740004FF0B /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		1BA5847F2B850C8B0004FF0B /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		1BA584822B861AF70004FF0B /* ScrollStrories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollStrories.swift; sourceTree = "<group>"; };
+		1BA584842B861B8B0004FF0B /* MyMainFeednCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainFeednCell.swift; sourceTree = "<group>"; };
+		1BA584862B861BBD0004FF0B /* RecommendFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFriends.swift; sourceTree = "<group>"; };
+		1BA584882B861BF40004FF0B /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		1BA5848A2B861C510004FF0B /* SubscribeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,16 +102,16 @@
 		1B75ADDA2B7171420020A315 /* UiKitDz */ = {
 			isa = PBXGroup;
 			children = (
+				1BA584812B8611C40004FF0B /* Models */,
 				1BA5847C2B850C160004FF0B /* Notifications */,
 				1BA584772B8416E90004FF0B /* Recomend */,
 				1BA584762B8416C30004FF0B /* TabBar */,
 				1BA584752B8416A30004FF0B /* Story */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE92B7171430020A315 /* Info.plist */,
-				1BA584572B839EA40004FF0B /* RibbonViewController.swift */,
+				1BA584572B839EA40004FF0B /* FeedViewController.swift */,
 				1BA584592B839ECC0004FF0B /* NotificationsViewController.swift */,
 				1BA5845B2B839EF10004FF0B /* ProfileViewController.swift */,
-				1BA584712B83BDBE0004FF0B /* Models.swift */,
 				1BA584732B83E7BF0004FF0B /* MainTableViewCell.swift */,
 				1BA5845D2B83A51B0004FF0B /* Dancing_Script */,
 			);
@@ -167,6 +177,19 @@
 				1BA5847F2B850C8B0004FF0B /* PostTableViewCell.swift */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		1BA584812B8611C40004FF0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BA584712B83BDBE0004FF0B /* CellTypes.swift */,
+				1BA584822B861AF70004FF0B /* ScrollStrories.swift */,
+				1BA584842B861B8B0004FF0B /* MyMainFeednCell.swift */,
+				1BA584862B861BBD0004FF0B /* RecommendFriends.swift */,
+				1BA584882B861BF40004FF0B /* PostComment.swift */,
+				1BA5848A2B861C510004FF0B /* SubscribeUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,20 +315,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA5848B2B861C510004FF0B /* SubscribeUser.swift in Sources */,
 				1BA584702B83BC0D0004FF0B /* StoriesView.swift in Sources */,
 				1BA5847B2B84172E0004FF0B /* RecomendView.swift in Sources */,
 				1BA5847E2B850C740004FF0B /* ButtonTableViewCell.swift in Sources */,
 				1BA584562B839DA40004FF0B /* TabBarViewController.swift in Sources */,
-				1BA584582B839EA40004FF0B /* RibbonViewController.swift in Sources */,
-				1BA584722B83BDBE0004FF0B /* Models.swift in Sources */,
+				1BA584582B839EA40004FF0B /* FeedViewController.swift in Sources */,
+				1BA584722B83BDBE0004FF0B /* CellTypes.swift in Sources */,
 				1BA584792B8417150004FF0B /* RecomendTableViewCell.swift in Sources */,
+				1BA584832B861AF70004FF0B /* ScrollStrories.swift in Sources */,
 				1BA584742B83E7BF0004FF0B /* MainTableViewCell.swift in Sources */,
 				1BA5845A2B839ECC0004FF0B /* NotificationsViewController.swift in Sources */,
 				1BA5845C2B839EF10004FF0B /* ProfileViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
 				1BA584802B850C8B0004FF0B /* PostTableViewCell.swift in Sources */,
+				1BA584872B861BBD0004FF0B /* RecommendFriends.swift in Sources */,
+				1BA584852B861B8B0004FF0B /* MyMainFeednCell.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
 				1BA5846E2B83B1450004FF0B /* StoriesTableViewCell.swift in Sources */,
+				1BA584892B861BF40004FF0B /* PostComment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

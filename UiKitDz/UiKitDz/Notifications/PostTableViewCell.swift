@@ -3,11 +3,11 @@
 
 import UIKit
 
-/// Ячейка с постом
+/// Ячейка уведомления  с постом
 final class PostTableViewCell: UITableViewCell {
     // MARK: - Constants
 
-    enum Constants {
+    private enum Constants {
         static let subscribeButtonText = "Подписаться"
         static let fontVerdanaBold = "Verdana-Bold"
         static let fontVerdana = "Verdana"
@@ -51,7 +51,8 @@ final class PostTableViewCell: UITableViewCell {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        configureCell()
     }
 
     // MARK: - Public Methods
