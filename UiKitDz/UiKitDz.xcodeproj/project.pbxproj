@@ -31,6 +31,14 @@
 		1BA584872B861BBD0004FF0B /* RecommendFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584862B861BBD0004FF0B /* RecommendFriends.swift */; };
 		1BA584892B861BF40004FF0B /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA584882B861BF40004FF0B /* PostNotification.swift */; };
 		1BA5848B2B861C510004FF0B /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA5848A2B861C510004FF0B /* Subscriber.swift */; };
+		1BEFC88F2B869498003B603D /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC88E2B869498003B603D /* HeaderTableViewCell.swift */; };
+		1BEFC8912B86B937003B603D /* StorySpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC8902B86B937003B603D /* StorySpaceView.swift */; };
+		1BEFC8932B86BD49003B603D /* StorySpaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC8922B86BD49003B603D /* StorySpaceContent.swift */; };
+		1BEFC8952B86BF3F003B603D /* StorySpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC8942B86BF3F003B603D /* StorySpaceTableViewCell.swift */; };
+		1BEFC8972B876AB8003B603D /* SpaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC8962B876AB8003B603D /* SpaceCollectionViewCell.swift */; };
+		1BEFC8992B877041003B603D /* CollectionPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC8982B877041003B603D /* CollectionPostTableViewCell.swift */; };
+		1BEFC89B2B879249003B603D /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC89A2B879249003B603D /* WKWebViewController.swift */; };
+		1BEFC89D2B87D37A003B603D /* FullStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEFC89C2B87D37A003B603D /* FullStoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +68,14 @@
 		1BA584862B861BBD0004FF0B /* RecommendFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendFriends.swift; sourceTree = "<group>"; };
 		1BA584882B861BF40004FF0B /* PostNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotification.swift; sourceTree = "<group>"; };
 		1BA5848A2B861C510004FF0B /* Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		1BEFC88E2B869498003B603D /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1BEFC8902B86B937003B603D /* StorySpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySpaceView.swift; sourceTree = "<group>"; };
+		1BEFC8922B86BD49003B603D /* StorySpaceContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySpaceContent.swift; sourceTree = "<group>"; };
+		1BEFC8942B86BF3F003B603D /* StorySpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySpaceTableViewCell.swift; sourceTree = "<group>"; };
+		1BEFC8962B876AB8003B603D /* SpaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		1BEFC8982B877041003B603D /* CollectionPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPostTableViewCell.swift; sourceTree = "<group>"; };
+		1BEFC89A2B879249003B603D /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		1BEFC89C2B87D37A003B603D /* FullStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullStoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,7 @@
 				1BA584772B8416E90004FF0B /* Recomend */,
 				1BA584762B8416C30004FF0B /* TabBar */,
 				1BA584752B8416A30004FF0B /* Story */,
+				1BEFC88D2B867E81003B603D /* ProfileFiles */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE92B7171430020A315 /* Info.plist */,
 				1BA584572B839EA40004FF0B /* FeedViewController.swift */,
@@ -129,8 +146,8 @@
 		1BA584752B8416A30004FF0B /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				1BA5846D2B83B1450004FF0B /* StoriesTableViewCell.swift */,
 				1BA5846F2B83BC0D0004FF0B /* StoriesView.swift */,
+				1BA5846D2B83B1450004FF0B /* StoriesTableViewCell.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -177,6 +194,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1BEFC88D2B867E81003B603D /* ProfileFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1BEFC88E2B869498003B603D /* HeaderTableViewCell.swift */,
+				1BEFC8902B86B937003B603D /* StorySpaceView.swift */,
+				1BEFC8922B86BD49003B603D /* StorySpaceContent.swift */,
+				1BEFC8942B86BF3F003B603D /* StorySpaceTableViewCell.swift */,
+				1BEFC8962B876AB8003B603D /* SpaceCollectionViewCell.swift */,
+				1BEFC8982B877041003B603D /* CollectionPostTableViewCell.swift */,
+				1BEFC89A2B879249003B603D /* WKWebViewController.swift */,
+				1BEFC89C2B87D37A003B603D /* FullStoryViewController.swift */,
+			);
+			path = ProfileFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,11 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B75ADEC2B7171430020A315 /* Build configuration list for PBXNativeTarget "UiKitDz" */;
 			buildPhases = (
+				1BA584022B719BE40004FF0B /* swift Formater */,
 				1B305AA62B71908E007F1A31 /* Swift Link */,
 				1B75ADD42B7171420020A315 /* Sources */,
 				1B75ADD52B7171420020A315 /* Frameworks */,
 				1B75ADD62B7171420020A315 /* Resources */,
-				1BA584022B719BE40004FF0B /* swift Formater */,
 			);
 			buildRules = (
 			);
@@ -298,19 +330,27 @@
 			files = (
 				1BA5848B2B861C510004FF0B /* Subscriber.swift in Sources */,
 				1BA584702B83BC0D0004FF0B /* StoriesView.swift in Sources */,
+				1BEFC8952B86BF3F003B603D /* StorySpaceTableViewCell.swift in Sources */,
+				1BEFC88F2B869498003B603D /* HeaderTableViewCell.swift in Sources */,
 				1BA5847B2B84172E0004FF0B /* RecomendView.swift in Sources */,
 				1BA5847E2B850C740004FF0B /* ButtonTableViewCell.swift in Sources */,
+				1BEFC8972B876AB8003B603D /* SpaceCollectionViewCell.swift in Sources */,
+				1BEFC8932B86BD49003B603D /* StorySpaceContent.swift in Sources */,
 				1BA584562B839DA40004FF0B /* TabBarViewController.swift in Sources */,
 				1BA584582B839EA40004FF0B /* FeedViewController.swift in Sources */,
 				1BA584792B8417150004FF0B /* RecomendTableViewCell.swift in Sources */,
+				1BEFC8992B877041003B603D /* CollectionPostTableViewCell.swift in Sources */,
 				1BA584832B861AF70004FF0B /* Story.swift in Sources */,
 				1BA584742B83E7BF0004FF0B /* MainTableViewCell.swift in Sources */,
 				1BA5845A2B839ECC0004FF0B /* NotificationsViewController.swift in Sources */,
+				1BEFC89B2B879249003B603D /* WKWebViewController.swift in Sources */,
 				1BA5845C2B839EF10004FF0B /* ProfileViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
 				1BA584802B850C8B0004FF0B /* PostTableViewCell.swift in Sources */,
 				1BA584872B861BBD0004FF0B /* RecommendFriends.swift in Sources */,
 				1BA584852B861B8B0004FF0B /* Post.swift in Sources */,
+				1BEFC89D2B87D37A003B603D /* FullStoryViewController.swift in Sources */,
+				1BEFC8912B86B937003B603D /* StorySpaceView.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
 				1BA5846E2B83B1450004FF0B /* StoriesTableViewCell.swift in Sources */,
 				1BA584892B861BF40004FF0B /* PostNotification.swift in Sources */,

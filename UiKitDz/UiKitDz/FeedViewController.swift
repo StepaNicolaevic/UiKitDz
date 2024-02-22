@@ -67,6 +67,7 @@ final class FeedViewController: UIViewController {
     private func configureTableView() {
         view.addSubview(tableView)
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(StoriesTableViewCell.self, forCellReuseIdentifier: Constants.storiesCellIdentifier)
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: Constants.mainCellIdentifier)
         tableView.register(RecomendTableViewCell.self, forCellReuseIdentifier: Constants.recomendCellIdentifier)

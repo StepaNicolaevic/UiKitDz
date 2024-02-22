@@ -35,10 +35,11 @@ final class TabBarViewController: UITabBarController {
             image: .chat,
             tag: 1
         )
-        profileViewController.tabBarItem = UITabBarItem(title: Constants.titleProfile, image: .profile, tag: 2)
+        let profileNavViewController = UINavigationController(rootViewController: profileViewController)
+        profileNavViewController.tabBarItem = UITabBarItem(title: Constants.titleProfile, image: .profile, tag: 2)
 
         setViewControllers(
-            [ribbonNavViewController, notificationsNavViewController, profileViewController],
+            [ribbonNavViewController, notificationsNavViewController, profileNavViewController],
             animated: true
         )
         tabBar.unselectedItemTintColor = .black
