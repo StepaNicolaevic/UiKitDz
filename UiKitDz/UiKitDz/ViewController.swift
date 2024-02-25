@@ -4,8 +4,4 @@
 import UIKit
 
 /// class viewcontroller
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+final class ViewController: UIViewController {}
