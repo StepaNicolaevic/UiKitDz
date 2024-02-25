@@ -3,12 +3,13 @@
 
 import UIKit
 
-/// ghjtjuy
-class StoryBordViewController: UIViewController {
-    @IBOutlet var greenView: UIView!
-    @IBOutlet var yellowView: UIView!
-    @IBOutlet var redView: UIView!
-
+/// Светофор
+final class StoryBordViewController: UIViewController {
+    // MARK: - IBOutlets
+    @IBOutlet private var greenView: UIView!
+    @IBOutlet private var yellowView: UIView!
+    @IBOutlet private var redView: UIView!
+// MARK: - Life Cycle
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         greenView.layer.cornerRadius = greenView.bounds.height / 2

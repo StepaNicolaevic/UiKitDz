@@ -3,29 +3,22 @@
 
 import UIKit
 
-/// Stack
-class StackViewController: UIViewController {
-    private let redView = UIView()
-    private let yellowView = UIView()
-    private let greenView = UIView()
+/// Светофор
+final class StackViewController: UIViewController {
+    // MARK: - Visual Components
+    private let redView = CornerView()
+    private let yellowView = CornerView()
+    private let greenView = CornerView()
     private let grayView = UIView()
-
     private var stackView = UIStackView()
-
+// MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setConstraintStackView()
         setupGrayView()
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        greenView.layer.cornerRadius = stackView.bounds.width / 2
-        yellowView.layer.cornerRadius = stackView.bounds.width / 2
-        redView.layer.cornerRadius = stackView.bounds.width / 2
-    }
-
+// MARK: - Private Methods
     private func setupUI() {
         redView.backgroundColor = .red
         yellowView.backgroundColor = .yellow

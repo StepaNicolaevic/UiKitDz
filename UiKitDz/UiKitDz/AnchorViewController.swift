@@ -2,13 +2,20 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Светофор
 final class AnchorViewController: UIViewController {
-    let redView = UIView()
-    let yellowView = UIView()
-    let greenView = UIView()
-    let grayView = UIView()
-
+    // MARK: - Visual Components
+    private let redView = UIView()
+    private let yellowView = UIView()
+    private let greenView = UIView()
+    private let grayView = UIView()
+// MARK: - Life Cycle
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        greenView.layer.cornerRadius = greenView.bounds.height / 2
+        yellowView.layer.cornerRadius = greenView.bounds.height / 2
+        redView.layer.cornerRadius = greenView.bounds.height / 2
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupYellowView()
@@ -17,13 +24,7 @@ final class AnchorViewController: UIViewController {
         setupGrayView()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        greenView.layer.cornerRadius = greenView.bounds.height / 2
-        yellowView.layer.cornerRadius = greenView.bounds.height / 2
-        redView.layer.cornerRadius = greenView.bounds.height / 2
-    }
-
+// MARK: - Private Methods
     private func setupRedView() {
         view.addSubview(redView)
         redView.translatesAutoresizingMaskIntoConstraints = false

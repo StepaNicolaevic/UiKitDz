@@ -3,5 +3,5 @@
 
 import UIKit
 
-/// class viewcontroller
+/// Экран меню
 final class ViewController: UIViewController {}
