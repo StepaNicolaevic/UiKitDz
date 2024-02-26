@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B54D2952B8D0BFD00FF040E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B54D2942B8D0BFD00FF040E /* MainTableViewCell.swift */; };
+		1B54D2972B8D0C8300FF040E /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B54D2962B8D0C8300FF040E /* OtherTableViewCell.swift */; };
 		1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDB2B7171420020A315 /* AppDelegate.swift */; };
 		1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDD2B7171420020A315 /* SceneDelegate.swift */; };
 		1B75ADE02B7171420020A315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B54D2942B8D0BFD00FF040E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		1B54D2962B8D0C8300FF040E /* OtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
 		1B75ADD82B7171420020A315 /* UiKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75ADDB2B7171420020A315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B75ADDD2B7171420020A315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B54D2902B8D051700FF040E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1B54D2932B8D054600FF040E /* Presenter */,
+				1B54D2922B8D053A00FF040E /* Model */,
+				1B54D2912B8D052B00FF040E /* View */,
+				1B54D2942B8D0BFD00FF040E /* MainTableViewCell.swift */,
+				1B54D2962B8D0C8300FF040E /* OtherTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1B54D2912B8D052B00FF040E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B75ADDF2B7171420020A315 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B54D2922B8D053A00FF040E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B54D2932B8D054600FF040E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		1B75ADCF2B7171420020A315 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +94,9 @@
 		1B75ADDA2B7171420020A315 /* UiKitDz */ = {
 			isa = PBXGroup;
 			children = (
+				1B54D2902B8D051700FF040E /* Profile */,
 				1B75ADDB2B7171420020A315 /* AppDelegate.swift */,
 				1B75ADDD2B7171420020A315 /* SceneDelegate.swift */,
-				1B75ADDF2B7171420020A315 /* ViewController.swift */,
 				1B75ADE12B7171420020A315 /* Main.storyboard */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */,
@@ -185,6 +223,8 @@
 			files = (
 				1B75ADE02B7171420020A315 /* ViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
+				1B54D2972B8D0C8300FF040E /* OtherTableViewCell.swift in Sources */,
+				1B54D2952B8D0BFD00FF040E /* MainTableViewCell.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
