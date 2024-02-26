@@ -3,9 +3,5 @@
 
 import UIKit
 
-/// class viewcontroller
-class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+/// Экран меню
+final class ViewController: UIViewController {}
