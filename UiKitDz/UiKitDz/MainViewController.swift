@@ -139,33 +139,49 @@ final class MainViewController: UIViewController {
         present(calculateAlertController, animated: true)
     }
 
+    var netWorkservise = NetworkService(requestCreator: RequestCreator())
+
     @objc private func guessTheNumber() {
-        let hiddenNumber = 7
-        var message = ""
-        var titleAlert = ""
-        let alertController = UIAlertController(title: "Угадай число от 1 до 10", message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            if let textFields = alertController.textFields {
-                if Int(textFields.first?.text ?? "") == hiddenNumber {
-                    message = "Вы угадали"
-                    titleAlert = "Поздравляю"
-                } else {
-                    message = "Это не верный ответ"
-                    titleAlert = "Упс!"
+        print(1)
+        netWorkservise.getRecipe(url: "54be5f54eb282ddc577c3e90c6c0c33e") { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(coment):
+
+                    print(coment)
+                case let .failure(error):
+                    print(error)
                 }
             }
-            let resultAlertController = UIAlertController(title: titleAlert, message: message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default)
-            resultAlertController.addAction(okAction)
-            self.present(resultAlertController, animated: true)
         }
-        let cancellationAction = UIAlertAction(title: "Отмена", style: .default)
-        alertController.addTextField { textField in
-            textField.placeholder = "Введите число"
-        }
-        alertController.addAction(cancellationAction)
-        alertController.addAction(okAction)
-        alertController.preferredAction = okAction
-        present(alertController, animated: true)
+//        let hiddenNumber = 7
+//        var message = ""
+//        var titleAlert = ""
+//        let alertController = UIAlertController(title: "Угадай число от 1 до 10", message: nil, preferredStyle:
+//        .alert)
+//        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+//            if let textFields = alertController.textFields {
+//                if Int(textFields.first?.text ?? "") == hiddenNumber {
+//                    message = "Вы угадали"
+//                    titleAlert = "Поздравляю"
+//                } else {
+//                    message = "Это не верный ответ"
+//                    titleAlert = "Упс!"
+//                }
+//            }
+//            let resultAlertController = UIAlertController(title: titleAlert, message: message, preferredStyle: .alert)
+//            let okAction = UIAlertAction(title: "Ok", style: .default)
+//            resultAlertController.addAction(okAction)
+//            self.present(resultAlertController, animated: true)
+//        }
+//        let cancellationAction = UIAlertAction(title: "Отмена", style: .default)
+//        alertController.addTextField { textField in
+//            textField.placeholder = "Введите число"
+//        }
+//        alertController.addAction(cancellationAction)
+//        alertController.addAction(okAction)
+//        alertController.preferredAction = okAction
+//        present(alertController, animated: true)
     }
 }
