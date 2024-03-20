@@ -11,13 +11,16 @@ class ThreeViewController: UIViewController {
         let infinityThread = InfinityLoop()
         print(infinityThread.isExecuting)
         infinityThread.start()
-        print(infinityThread.isExecuting)
 
-        sleep(5)
-        print(infinityThread.isExecuting)
+        sleep(2)
 
-        infinityThread.cancel()
-        sleep(1)
+        print(infinityThread.isExecuting)
+        while infinityThread.isExecuting {
+            if infinityThread.counter == 5 {
+                infinityThread.cancel()
+            }
+        }
+
         print(infinityThread.isFinished)
     }
 
