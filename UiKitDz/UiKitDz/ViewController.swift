@@ -23,7 +23,7 @@ class TimerThread: Thread {
     }
 
     override func main() {
-        timer = Timer.scheduledTimer(
+        timer = Timer(
             timeInterval: 1.0,
             target: self,
             selector: #selector(updateTimer),
@@ -32,6 +32,8 @@ class TimerThread: Thread {
         )
 
         print(Thread.current)
+
+        RunLoop.main.add(timer, forMode: .default)
 
         RunLoop.current.run()
     }
