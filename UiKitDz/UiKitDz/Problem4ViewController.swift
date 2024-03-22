@@ -3,7 +3,7 @@
 
 import UIKit
 
-///
+///Проблема была активной блокировки LiveLock
 class Problem4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
