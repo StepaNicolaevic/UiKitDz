@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6781B32BAB9863006F2FEF /* Problem3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781B22BAB9863006F2FEF /* Problem3ViewController.swift */; };
+		1B6781B52BABA236006F2FEF /* Problem4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781B42BABA236006F2FEF /* Problem4ViewController.swift */; };
+		1B6781B72BABA585006F2FEF /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781B62BABA585006F2FEF /* Task3ViewController.swift */; };
+		1B6781B92BAC357B006F2FEF /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781B82BAC357B006F2FEF /* TwoViewController.swift */; };
+		1B6781BB2BAC3922006F2FEF /* Problem1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781BA2BAC3922006F2FEF /* Problem1ViewController.swift */; };
+		1B6781BD2BAC3931006F2FEF /* Problem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781BC2BAC3931006F2FEF /* Problem2ViewController.swift */; };
+		1B6781BF2BACE20B006F2FEF /* Task4z1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781BE2BACE20B006F2FEF /* Task4z1ViewController.swift */; };
+		1B6781C12BACE228006F2FEF /* Task4z2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781C02BACE228006F2FEF /* Task4z2ViewController.swift */; };
+		1B6781C32BACE23C006F2FEF /* Task4z3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781C22BACE23C006F2FEF /* Task4z3ViewController.swift */; };
+		1B6781C52BACE24F006F2FEF /* Task4z4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781C42BACE24F006F2FEF /* Task4z4ViewController.swift */; };
 		1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDB2B7171420020A315 /* AppDelegate.swift */; };
 		1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDD2B7171420020A315 /* SceneDelegate.swift */; };
 		1B75ADE02B7171420020A315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* ViewController.swift */; };
@@ -16,6 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6781B22BAB9863006F2FEF /* Problem3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem3ViewController.swift; sourceTree = "<group>"; };
+		1B6781B42BABA236006F2FEF /* Problem4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem4ViewController.swift; sourceTree = "<group>"; };
+		1B6781B62BABA585006F2FEF /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
+		1B6781B82BAC357B006F2FEF /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
+		1B6781BA2BAC3922006F2FEF /* Problem1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem1ViewController.swift; sourceTree = "<group>"; };
+		1B6781BC2BAC3931006F2FEF /* Problem2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problem2ViewController.swift; sourceTree = "<group>"; };
+		1B6781BE2BACE20B006F2FEF /* Task4z1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task4z1ViewController.swift; sourceTree = "<group>"; };
+		1B6781C02BACE228006F2FEF /* Task4z2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task4z2ViewController.swift; sourceTree = "<group>"; };
+		1B6781C22BACE23C006F2FEF /* Task4z3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task4z3ViewController.swift; sourceTree = "<group>"; };
+		1B6781C42BACE24F006F2FEF /* Task4z4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task4z4ViewController.swift; sourceTree = "<group>"; };
 		1B75ADD82B7171420020A315 /* UiKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75ADDB2B7171420020A315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B75ADDD2B7171420020A315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +79,20 @@
 				1B75ADDB2B7171420020A315 /* AppDelegate.swift */,
 				1B75ADDD2B7171420020A315 /* SceneDelegate.swift */,
 				1B75ADDF2B7171420020A315 /* ViewController.swift */,
+				1B6781B82BAC357B006F2FEF /* TwoViewController.swift */,
+				1B6781BA2BAC3922006F2FEF /* Problem1ViewController.swift */,
+				1B6781BC2BAC3931006F2FEF /* Problem2ViewController.swift */,
+				1B6781B22BAB9863006F2FEF /* Problem3ViewController.swift */,
+				1B6781B42BABA236006F2FEF /* Problem4ViewController.swift */,
+				1B6781B62BABA585006F2FEF /* Task3ViewController.swift */,
 				1B75ADE12B7171420020A315 /* Main.storyboard */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */,
 				1B75ADE92B7171430020A315 /* Info.plist */,
+				1B6781BE2BACE20B006F2FEF /* Task4z1ViewController.swift */,
+				1B6781C02BACE228006F2FEF /* Task4z2ViewController.swift */,
+				1B6781C22BACE23C006F2FEF /* Task4z3ViewController.swift */,
+				1B6781C42BACE24F006F2FEF /* Task4z4ViewController.swift */,
 			);
 			path = UiKitDz;
 			sourceTree = "<group>";
@@ -153,7 +183,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 		1BA584022B719BE40004FF0B /* swift Formater */ = {
@@ -183,9 +214,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6781BB2BAC3922006F2FEF /* Problem1ViewController.swift in Sources */,
+				1B6781C32BACE23C006F2FEF /* Task4z3ViewController.swift in Sources */,
 				1B75ADE02B7171420020A315 /* ViewController.swift in Sources */,
+				1B6781B72BABA585006F2FEF /* Task3ViewController.swift in Sources */,
+				1B6781BD2BAC3931006F2FEF /* Problem2ViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
+				1B6781B52BABA236006F2FEF /* Problem4ViewController.swift in Sources */,
+				1B6781B92BAC357B006F2FEF /* TwoViewController.swift in Sources */,
+				1B6781C12BACE228006F2FEF /* Task4z2ViewController.swift in Sources */,
+				1B6781BF2BACE20B006F2FEF /* Task4z1ViewController.swift in Sources */,
+				1B6781B32BAB9863006F2FEF /* Problem3ViewController.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
+				1B6781C52BACE24F006F2FEF /* Task4z4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
