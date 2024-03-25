@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6781C72BB04278006F2FEF /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781C62BB04278006F2FEF /* Task2ViewController.swift */; };
+		1B6781C92BB04300006F2FEF /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781C82BB04300006F2FEF /* Task3ViewController.swift */; };
+		1B6781CB2BB0444E006F2FEF /* Task4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781CA2BB0444E006F2FEF /* Task4ViewController.swift */; };
+		1B6781CD2BB0461F006F2FEF /* Task5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781CC2BB0461F006F2FEF /* Task5ViewController.swift */; };
+		1B6781CF2BB050D2006F2FEF /* Task6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781CE2BB050D2006F2FEF /* Task6ViewController.swift */; };
+		1B6781D12BB0515E006F2FEF /* Task7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6781D02BB0515E006F2FEF /* Task7ViewController.swift */; };
 		1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDB2B7171420020A315 /* AppDelegate.swift */; };
 		1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDD2B7171420020A315 /* SceneDelegate.swift */; };
 		1B75ADE02B7171420020A315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B75ADDF2B7171420020A315 /* ViewController.swift */; };
@@ -16,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6781C62BB04278006F2FEF /* Task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
+		1B6781C82BB04300006F2FEF /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
+		1B6781CA2BB0444E006F2FEF /* Task4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task4ViewController.swift; sourceTree = "<group>"; };
+		1B6781CC2BB0461F006F2FEF /* Task5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5ViewController.swift; sourceTree = "<group>"; };
+		1B6781CE2BB050D2006F2FEF /* Task6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task6ViewController.swift; sourceTree = "<group>"; };
+		1B6781D02BB0515E006F2FEF /* Task7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task7ViewController.swift; sourceTree = "<group>"; };
 		1B75ADD82B7171420020A315 /* UiKitDz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UiKitDz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B75ADDB2B7171420020A315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B75ADDD2B7171420020A315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,12 @@
 				1B75ADDB2B7171420020A315 /* AppDelegate.swift */,
 				1B75ADDD2B7171420020A315 /* SceneDelegate.swift */,
 				1B75ADDF2B7171420020A315 /* ViewController.swift */,
+				1B6781C62BB04278006F2FEF /* Task2ViewController.swift */,
+				1B6781C82BB04300006F2FEF /* Task3ViewController.swift */,
+				1B6781CA2BB0444E006F2FEF /* Task4ViewController.swift */,
+				1B6781CC2BB0461F006F2FEF /* Task5ViewController.swift */,
+				1B6781CE2BB050D2006F2FEF /* Task6ViewController.swift */,
+				1B6781D02BB0515E006F2FEF /* Task7ViewController.swift */,
 				1B75ADE12B7171420020A315 /* Main.storyboard */,
 				1B75ADE42B7171430020A315 /* Assets.xcassets */,
 				1B75ADE62B7171430020A315 /* LaunchScreen.storyboard */,
@@ -153,7 +171,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 		1BA584022B719BE40004FF0B /* swift Formater */ = {
@@ -183,9 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6781C72BB04278006F2FEF /* Task2ViewController.swift in Sources */,
 				1B75ADE02B7171420020A315 /* ViewController.swift in Sources */,
 				1B75ADDC2B7171420020A315 /* AppDelegate.swift in Sources */,
+				1B6781D12BB0515E006F2FEF /* Task7ViewController.swift in Sources */,
 				1B75ADDE2B7171420020A315 /* SceneDelegate.swift in Sources */,
+				1B6781CF2BB050D2006F2FEF /* Task6ViewController.swift in Sources */,
+				1B6781CB2BB0444E006F2FEF /* Task4ViewController.swift in Sources */,
+				1B6781C92BB04300006F2FEF /* Task3ViewController.swift in Sources */,
+				1B6781CD2BB0461F006F2FEF /* Task5ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
