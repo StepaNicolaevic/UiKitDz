@@ -24,6 +24,7 @@
 		1B75ADE42B7171430020A315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B75ADE72B7171430020A315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B75ADE92B7171430020A315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA79C782BB368B200F89597 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 		1B75ADCF2B7171420020A315 = {
 			isa = PBXGroup;
 			children = (
+				1BA79C782BB368B200F89597 /* MyPlayground.playground */,
 				1B75ADDA2B7171420020A315 /* UiKitDz */,
 				1B75ADD92B7171420020A315 /* Products */,
 			);
